@@ -1,0 +1,5 @@
+{
+    "customer_number": "${beneAccountNo}",
+    "payment_period": "${period}",
+    "product_id": "${productCodeExternal}"
+}
