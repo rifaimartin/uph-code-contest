@@ -1,102 +1,29 @@
-OLD INQUIRY BILLS :
-
 {
-	"CompanyCode": "${vania.companyCode}",
-	"CustomerNumber": "${vania.customerNumber}",
-	"RequestID": "${vania.requestId}",
-	"InquiryStatus": "00",
-	"InquiryReason": {
-		"Indonesian": "Sukses",	
-		"English": "Success"
-	},
-	"CustomerName": "${vania.customerName}",
-	"CurrencyCode": "${vania.currencyCode}",
-	"TotalAmount": "${vania.totalAmount}",
-	"SubCompany": "${vania.subCompany}",
-	"DetailBills": ${vania.detailBills},
-	"FreeTexts": ${vania.freeTexts},
-	"AdditionalData": "${vania.additionalData}" 
-}
-
-
-{
-    "createdBy": "SYSTEM",
-    "createdDate": "2022-08-30T03:04:06.984+00:00",
-    "updatedBy": "SYSTEM",
-    "updatedDate": "2022-08-30T03:08:48.285+00:00",
-    "id": "30082022119b0b2aeee14ecdb7245d54657cf738",
-    "transactionDate": "2022-08-29T17:00:00.000+00:00",
-    "referenceNo": "CMB8228117829500",
-    "originalRef": "",
-    "currencyCode": "IDR",
-    "nominal": 1875000000,
-    "messageType": "103",
-    "transactionTypeCode": "100",
-    "transferPriority": "N",
-    "transferPriorityContent": "0070",
-    "senderBic": "BNIAIDJA",
-    "senderAccNumber": "702537298400",
-    "senderName": "FATMAWATI SANTOSO",
-    "senderAddress": "ISTANA DIENG TENGAH I/10 KAB.  MALANG 1213",
-    "receiverBic": "ROYBIDJ1",
-    "receiverAccNo": "001116109969",
-    "receiverName": "FATMAWATI SANTOSO",
-    "receiverAddress": "JKT JAKARTA 0300",
-    "remittanceInfo1": "ROYBIDJ1 FATMAWATI SANTOSO",
-    "remittanceInfo2": "001116109969 BDS",
-    "remittanceInfo3": "",
-    "remittanceInfo4": "",
-    "keywordID72_1": "CODTYPTR",
-    "keywordName72_1": "100",
-    "keywordID77_1": "FEAB",
-    "keywordName77_1": "R",
-    "keywordID77_2": "PTR",
-    "keywordName77_2": "LOCAL-LOCAL",
-    "keywordID72_2": "CLRC",
-    "keywordName72_2": "1213",
-    "keywordID72_3": "",
-    "keywordName72_3": "",
-    "keywordID72_4": "",
-    "keywordName72_4": "",
-    "keywordID72_5": "",
-    "keywordName72_5": "",
-    "keywordID72_6": "",
-    "keywordName72_6": "",
-    "errorCode": "002-Account Not Found",
-    "coreName": null,
-    "accExisted": false,
-    "accStatusSub": null,
-    "needAction": true,
-    "accept": false,
-    "refund": true,
-    "internal": true,
-    "lastAction": "021-Rejected"
-}
-
-
-
-{
-    "error_code": "ESB-07-609",
-    "error_message": {
-        "indonesian": "Sistem tidak dapat dipergunakan untuk sementara, cobalah beberapa saat lagi.",
-        "english": "System unavailable at the moment. Please try again later."
-    }
-}
-
-
-POST https://10.27.126.60:8065/transfers/skn/000000001031
-{
-    "amount": 70000,
-    "beneficiaryAccountNumber": "101010",
-    "beneficiaryName": "Budi Satria",
-    "beneficiarySwiftCode": "CENAIDJA",
-    "beneficiaryBank": "PT BANK CENTRAL ASIA",
-    "beneficiaryType": "1",
-    "beneficiaryCitizen": "1",
-    "senderName": "Satria",
-    "senderType": "1",
-    "senderCitizen": "1",
-    "description": "Test",
-    "currencyCode": "IDR",
-    "voucherCode": ""
+    "provider_name": "LINKAJA",
+    "product_name": "LINKAJA 20",
+    "data": {
+        "order_id": "1663301586046256",
+        "reference_number": "1663301586046256",
+        "customer_id": "+628159397836",
+        "amount": "21000",
+        "fwd_stand": "",
+        "fwd_reference_number": "",
+        "customer_name": "",
+        "buying_option": "",
+        "fee_admin": "0.0",
+        "va_transaction_id": "",
+        "va_bill_number": "",
+        "fwd_bill_info": "",
+        "fwd_authKey": ""
+    },
+    "fineract_transaction_id": "47387161",
+    "product_code_external": "1569",
+    "fineract_resource_id_1": "47387161",
+    "fineract_resource_id_2": "",
+    "partner_url": "",
+    "discount_amount": {
+        "amount": "0.0",
+        "project_code": ""
+    },
+    "total_amount": "21000"
 }
