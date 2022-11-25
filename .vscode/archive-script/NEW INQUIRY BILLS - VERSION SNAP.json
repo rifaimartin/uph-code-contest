@@ -1,0 +1,36 @@
+NEW INQUIRY BILLS - VERSION SNAP
+
+{
+    "responseCode": "2002400",
+    "responseMessage": "Successful",
+    "virtualAccountData": {
+        "inquiryStatus": "00",
+        "inquiryReason": {
+            "english": "Success",
+            "indonesia": "Sukses"
+        },
+        "partnerServiceId": "X-PARTNER-ID",
+        "customerNo": "${vania.customerNumber}",
+        "virtualAccountNo": " 12345123456789012345678",
+        "virtualAccountName": "${vania.customerName}",
+        "virtualAccountEmail": "john@email.com",
+        "virtualAccountPhone": "6281828384858",
+        "inquiryRequestId": "${vania.requestId}",
+        "totalAmount": {
+            "value": "${vania.totalAmount}",
+            "currency": "${vania.currencyCode}"
+        },
+        "subCompany": "",
+        "billDetails": ${vania.detailBills},
+        "freeTexts": ${vania.freeTexts},
+        "virtualAccountTrxType": "1",
+        "feeAmount": {
+            "value": "",
+            "currency": ""
+        },
+        "additionalInfo": {
+            "deviceId": "12345679237",
+            "channel": "mobilephone"
+        }
+    }
+}

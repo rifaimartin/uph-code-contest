@@ -1,0 +1,29 @@
+{
+    "provider_name": "LINKAJA",
+    "product_name": "LINKAJA 20",
+    "data": {
+        "order_id": "1663301586046256",
+        "reference_number": "1663301586046256",
+        "customer_id": "+628159397836",
+        "amount": "21000",
+        "fwd_stand": "",
+        "fwd_reference_number": "",
+        "customer_name": "",
+        "buying_option": "",
+        "fee_admin": "0.0",
+        "va_transaction_id": "",
+        "va_bill_number": "",
+        "fwd_bill_info": "",
+        "fwd_authKey": ""
+    },
+    "fineract_transaction_id": "47387161",
+    "product_code_external": "1569",
+    "fineract_resource_id_1": "47387161",
+    "fineract_resource_id_2": "",
+    "partner_url": "",
+    "discount_amount": {
+        "amount": "0.0",
+        "project_code": ""
+    },
+    "total_amount": "21000"
+}
