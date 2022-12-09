@@ -80,6 +80,7 @@ int main(void)
     int x,y;
     int y_start, y_end;
     int x_frog = XSTART, y_frog = YSTART;
+    int lives = 3;
 
     printf("Enter command: ");
     while (scanf("%c", &command) != EOF) {
@@ -112,8 +113,30 @@ int main(void)
 
             move_frog(game_board, command, &x_frog, &y_frog);
 
-            print_board(game_board);
-            printf("Enter command: ");
+            if(game_board[x_frog][y_frog].type == LILLYPAD) {
+                print_board(game_board);
+                printf("Bro broooo!!!!  You won! \n");
+                break;
+            } else if (game_board[x_frog][y_frog].type == WATER) {
+                lives--;
+                print_board(game_board);
+                if (!lives) {
+                    printf("Bro broooo!!!!  why jump to water bro? you fix losee, you DIED!!! \n");
+                    break;
+                } else {
+                    game_board[x_frog][y_frog].occupied = FALSE;
+                    printf("# LIVES LEFT : %d #\n\n", lives);
+                    x_frog = XSTART;
+                    x_frog = YSTART;
+                    game_board[x_frog][y_frog].occupied = TRUE;
+                    printf("Enter command: ");
+                    print_board(game_board);
+                }
+            } else {
+               print_board(game_board);
+               printf("Enter command: ");
+            }
+          
         }
         /* code */
     }
