@@ -3,6 +3,7 @@
 // This program was written by Muhamad Rifai (01085220004)
 // on 21 November 2022, 6:53 AM Phase 1
 // on 03 Desember 2022, 18:13 PM Phase 2
+// on 09 Desember 2022, 18:13 PM Phase 3
 
 //klo tile nya bisa bergerak lebih baik
 #include <stdio.h>
@@ -31,6 +32,7 @@ struct board_tile
 {
     enum tile_type type; // The type of piece it is (water, bank, etc.)
     int occupied;        // TRUE or FALSE based on if Frogger is there.
+    int bug_present;
 };
 
 // Prints out the current state of the board.
@@ -39,6 +41,8 @@ void init_board(struct board_tile board[SIZE][SIZE]);
 void print_board(struct board_tile board[SIZE][SIZE]);
 // this function used for add log in board when play a game by command l
 void add_log(struct board_tile board[SIZE][SIZE], int, int, int);
+// this function used for add bug in board when play a game by command l
+void add_bug(struct board_tile board[SIZE][SIZE], int, int);
 // this function used for add remove row in board when play a game by command c
 void clear_row(struct board_tile board[SIZE][SIZE], int);
 // this function used for add remove log by rane in board when play a game by command R
@@ -117,7 +121,7 @@ int main(void)
                 print_board(game_board);
                 printf("Bro broooo!!!!  You won! \n");
                 break;
-            } else if (game_board[x_frog][y_frog].type == WATER) {
+            } else if ((game_board[x_frog][y_frog].type == WATER) || (game_board[x_frog][y_frog].bug_present) ) {
                 lives--;
                 print_board(game_board);
                 if (!lives) {
@@ -125,20 +129,27 @@ int main(void)
                     break;
                 } else {
                     game_board[x_frog][y_frog].occupied = FALSE;
-                    printf("# LIVES LEFT : %d #\n\n", lives);
+                    printf("#\n LIVES LEFT : %d #\n\n", lives);
                     x_frog = XSTART;
                     x_frog = YSTART;
                     game_board[x_frog][y_frog].occupied = TRUE;
-                    printf("Enter command: ");
                     print_board(game_board);
+                    printf("Enter command: ");
                 }
             } else {
                print_board(game_board);
                printf("Enter command: ");
             }
-          
+        } else if (command == 'b') {
+            int x_bug, y_bug;
+            scanf(" %d %d", &x_bug, &y_bug);
+            if ((x > 0) && (x < 8)) {
+                add_bug(game_board, x_bug, y_bug);
+                print_board(game_board);
+                printf("Enter command: ");
+            }
+
         }
-        /* code */
     }
 
 
@@ -172,6 +183,7 @@ char type_to_char(enum tile_type type) {
     return type_char;
 }
 
+// this function used for moving koordinat frog in a game board
 void move_frog(struct board_tile board[SIZE][SIZE], char command, int* x_frog, int* y_frog) {
     int temp_x = *x_frog;
     int temp_y = *y_frog;
@@ -232,6 +244,16 @@ void add_log(struct board_tile board[SIZE][SIZE], int x, int y_start, int y_end)
     }
 }
 
+// this function used for define bug in a game board
+void add_bug(struct board_tile board[SIZE][SIZE], int x_bug, int y_bug) {
+    
+    if ((y_bug >= 0) && (y_bug <= 8)) {
+        if ((board[x_bug][y_bug].type == LOG) || (board[x_bug][y_bug].type == TURTLE))  {
+            board[x_bug][y_bug].bug_present = TRUE;
+        }
+    }
+}
+
 // this function used for clear row in a game board
 void clear_row(struct board_tile board[SIZE][SIZE], int x) {
      for (int i = 0; i < 8; i++) {
@@ -273,10 +295,12 @@ void remove_log(struct board_tile board[SIZE][SIZE], int x, int y) {
       }
 }
 
+// initiate firts board
 void init_board(struct board_tile board[SIZE][SIZE]) {
     for (int row = 0; row < SIZE; row++) {
         for (int col = 0; col < SIZE; col++) {
             board[row][col].occupied = FALSE;
+            board[row][col].bug_present = FALSE;
             if (row == 0) {
                 if (col%2==0) board[row][col].type = LILLYPAD;
                 else board[row][col].type = WATER;
@@ -290,15 +314,21 @@ void init_board(struct board_tile board[SIZE][SIZE]) {
     }
 }
 
+// print board the function always call after u running command
 void print_board(struct board_tile board[SIZE][SIZE]) {
     // char type_char = '\0';
     for (int row = 0; row < SIZE; row++) {
         for (int col = 0; col < SIZE; col++) {
+            char type_char = '\0';
             if (board[row][col].occupied) {
-                printf("F ");
+                type_char = 'F';
+            } else if (board[row][col].bug_present){
+                type_char = 'B';
             } else {
-                printf("%c ", type_to_char(board[row][col].type));
+                type_char = type_to_char(board[row][col].type);
+                // printf("%c ", type_to_char(board[row][col].type));
             }
+            printf("%c ", type_char);
         }
         printf("\n");
     }
