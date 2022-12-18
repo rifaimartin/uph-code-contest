@@ -19,7 +19,7 @@
 #define YSTART 4
 #define LEFT 0
 #define RIGHT 1
-#define STATIC 0
+#define STATIC -1
 // Provided Enums
 enum tile_type
 {
@@ -133,9 +133,12 @@ int main(void)
 
             if(game_board[x_frog][y_frog].type == LILLYPAD) {
                 print_board(game_board,bug_on_board);
+                lives++;
                 printf("Bro broooo!!!!  You won! \n");
+                printf("your life increases wkwkw! lives = %d\n", lives);
                 break;
             } else if ((game_board[x_frog][y_frog].type == WATER) || (bug_on_board[x_frog][y_frog].present) ) {
+                // printf("MASUK SINI KAH?");
                 lives--;
                 print_board(game_board, bug_on_board);
                 if (!lives) {
@@ -143,15 +146,16 @@ int main(void)
                     break;
                 } else {
                     game_board[x_frog][y_frog].occupied = FALSE;
-                    printf("#\n LIVES LEFT : %d #\n\n", lives);
+                    printf("\n# LIVES LEFT : %d #\n\n", lives);
                     x_frog = XSTART;
-                    x_frog = YSTART;
+                    y_frog = YSTART;
                     game_board[x_frog][y_frog].occupied = TRUE;
                     print_board(game_board, bug_on_board);
                     printf("Enter command: ");
                 }
             } else {
                print_board(game_board, bug_on_board);
+            //    printf("masuk sini fai");
                printf("Enter command: ");
             }
         } else if (command == 'b') {
@@ -162,8 +166,7 @@ int main(void)
                 print_board(game_board, bug_on_board);
                 printf("Enter command: ");
             }
-
-        }
+        } 
     }
 
 
@@ -296,7 +299,7 @@ void add_log(struct board_tile board[SIZE][SIZE], int x, int y_start, int y_end)
         }
     }
     for (int i = y_start; i <= y_end; i++) {
-        printf("trace:filled-log");
+        // printf("trace:filled-log");
         board[x][i].type = LOG;
     }
 }
