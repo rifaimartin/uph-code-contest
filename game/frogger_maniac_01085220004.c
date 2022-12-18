@@ -5,6 +5,8 @@
 // on 03 Desember 2022, 18:13 PM Phase 2
 // on 09 Desember 2022, 18:13 PM Phase 3
 // on 14 Desember 2022, 19.00 PM Phase 3.1 , 3.2 , 3.3
+// on 19 Desember 2022, 04.00 AM phase 3.4 - adding feature increses life when u frog placed in lyypad
+// on 21 desember 2022 -> i will adding combo to jump with one step to lylypad HAHAHA
 
 //klo tile nya bisa bergerak lebih baik
 #include <stdio.h>
