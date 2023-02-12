@@ -1,32 +1,38 @@
 #include <stdio.h>
 
 void main()
-{ 
-   int m, u, n, a;
+{
 
-   printf("Program Bilangan Prima\n");
-   printf("Create by : Hafizatul Muna - J1F115207\n");
-   printf("--------------awal------------------------\n");
-   scanf("Jumlah Batas Awal %d : ", &m);
-   printf("--------------akhir------------------------\n");
-   scanf("Jumlah Batas Akhir%d : ", &a);
-   
+  int firstRange = 5, lastRange = 10;
 
-   while (m<=a)
-    {
-      n=0;
-      u=1;
-      while (u<=m)
-      {
-          if (m % u == 0)
-            n = n + 1;
-            u++;
-      }
-      if (n==2){
-          printf("%d  ",m);
-      }
-    m++;
-    }
-
-   return 0 ;
+  // printf("input first range value : ");
+  // scanf("%d", &firstRange);
+  // printf("input last range value : ");
+  // scanf("%d", &lastRange);
+  loopValueFirstLastRange(firstRange, lastRange);
+  return 0;
 }
+
+void loopValueFirstLastRange(int firstRange, int lastRange)
+{
+  int initialValue, flag;
+  while (firstRange <= lastRange)
+  {
+    flag = 0;
+    initialValue = 1;
+    while (initialValue <= firstRange)
+    {
+      if (firstRange % initialValue == 0)
+      {
+        flag++;
+      }
+
+      initialValue++;
+    }
+    if (flag == 2)
+    {
+      printf(" %d  ", firstRange);
+    }
+    firstRange++;
+  }
+};

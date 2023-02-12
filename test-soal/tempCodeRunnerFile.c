@@ -1,0 +1,1 @@
+printf("input total query:");

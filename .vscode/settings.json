@@ -27,5 +27,8 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "files.associations": {
+    "soal-2c": "c"
+  }
 }
