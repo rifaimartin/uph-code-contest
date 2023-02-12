@@ -1,0 +1,32 @@
+- truth slalu benar
+- lie slalu salah
+- wisodm bisa jujur bisa juga salah
+
+
+paling kiri trut h dan menghampiri truth. dan ia menjawab truth
+bertanya pada yang tengah wisdown, saya wisdown.
+bertanya ke yan kanan .  
+
+
+
+
+
+
+{
+    "accountNo": "000572267908",
+    "batch": [
+        {
+            "locale": "en",
+            "dateFormat": "dd MMMM yyyy",
+            "transactionDate": "03 February 2023",
+            "transactionAmount": "50000",
+            "paymentTypeName": "BIAP",
+            "accountNumber": "FIN006-BLIBLI01",
+            "checkNumber": "21BE5F00-F106-440B-8E4A-3B636D222E50",
+            "routingCode": "21BE5F00-F106-440B-8E4A-3B636D222E50",
+            "receiptNumber": "DA02101D-82FA-4296-869F-4478F6227797",
+            "bankNumber": "900001",
+            "noReff": "1675412475119285"
+        }
+    ]
+}
