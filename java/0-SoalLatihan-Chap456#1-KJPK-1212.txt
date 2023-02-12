@@ -1,0 +1,26 @@
+Soal A
+Buatlah sebuah class dengan nama "Purchase". Setiap "Purchase" (pembelian) terdiri dari sebuah nomor invoice (invoice number), banyaknya penjualan (sale amount), dan banyaknya pajak penjualan (amount of sales tax). 
+
+Buatlah accessor methods (setter) untuk atribut "invoice number" dan "sale amount". di dalam method set...() untuk "sale amount", hitunglah "sales tax" sebesar 5% dari "sale amount"
+Buatlah juga sebuah method "display" yang akan menampilkan data detail dari Purchase.
+Buatlah method lain yang tidak disebutkan dalam soal ini, namun sebenarnya diperlukan untuk class ini supaya dapat berjalan dengan baik.
+
+Simpanlah file dengan nama "Purchase.java".
+
+Soal B
+Buatlah sebuah aplikasi yang mendeklarasikan sebuah objek bertipe class Purchase, dan menampilkan pertanyaan (prompt) kepada user mengenai detail dari object bertipe Purchase. 
+Ketika menampilkan pertanyaan tentang "invoice number", pastikan bahwa program hanya akan melanjutkan proses jika angka yang diinput oleh user berada di antara 1000 dan 8000.
+Ketika menampilkan pertanyaan tentang "sale amount", pastikan bahwa program hanya akan melanjutkan proses jika angka yang diinput oleh user merupakan bilangan nonnegative. 
+Setelah objek bertipe Purchase berhasil dibuat, tampilkan nilai "invoice number", "sale amount", and "sales tax" dari objek tersebut. 
+Simpanlah file dengan nama "CreatePurchase.java".
+
+
+
+
+
+
+
+
+
+
+
