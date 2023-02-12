@@ -1,6 +1,8 @@
 // Frogger Game with C
 //
 // This program was written by Muhamad Rifai (01085220004)
+
+//#MY GITHUB LINK -> track update code in repo my frog love [https://github.com/rifaimartin/uph-code-contest/tree/master/game]
 // on 21 November 2022, 6:53 AM Phase 1
 // on 03 Desember 2022, 18:13 PM Phase 2
 // on 09 Desember 2022, 18:13 PM Phase 3

@@ -29,6 +29,20 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "soal-2c": "c"
-  }
+    "soal-2c": "c",
+    "string": "c",
+    "array": "c",
+    "bitset": "c",
+    "initializer_list": "c",
+    "regex": "c",
+    "utility": "c",
+    "valarray": "c"
+  },
+  "launch": {
+    
+
+    " figurations": [],
+    "compounds": []
+  },
+  "c-cpp-compile-run.run-in-external-terminal": true,
 }
