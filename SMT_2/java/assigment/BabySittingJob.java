@@ -1,3 +1,4 @@
+package assigment;
 public class BabySittingJob {
     private int jobNum;
     private int empCode;
