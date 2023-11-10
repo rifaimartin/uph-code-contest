@@ -1,0 +1,1 @@
+`Product` merepresentasikan produk yang diperjualbelikan pada sebuah toko. Objek yang diwakili oleh CLASS `Product` dan subclass `Electronics` termasuk dalam kategori physical object karena merupakan barang atau produk yang memiliki bentuk fisik dan dapat dilihat, dirasakan, dan dimanfaatkan oleh pengguna.
